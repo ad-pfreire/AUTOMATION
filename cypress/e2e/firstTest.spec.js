@@ -25,7 +25,7 @@ describe('Job Link Microsite Automation Test', () => {
     cy.get('[name="terms"]').click();
     cy.get('[class="btn btn-primary card-form-btn primary-btn register-btn"]').click();
     //cy.url().should('include', 'https://microsite-dev6.automateddecision.com/settings#/subscription') // NO SIRVE ESTO
-
+   // HOLAAAA!! 
   });
 
 
