@@ -1,9 +1,7 @@
 
-describe('Job Link Microsite Automation Test', () => {
+import { mockusers } from "./cypress/usersinfo";
 
-  // beforeEach('login to application', () => {  // only if I use it on every TC.
-  // cy.loginToApplication()
-  // })
+describe('Job Link Microsite Automation Test', () => {
 
   it('Log In', () => {
     cy.log('Yaay we logged in');
@@ -16,14 +14,14 @@ describe('Job Link Microsite Automation Test', () => {
 
     cy.get('[class="btn btn-primary-outline card-form-btn secondary-btn"]').click();
 
-    cy.get('[placeholder="Enter your name"]').type('Paulcy');
-    cy.get('[placeholder="Enter your last name"]').type('Freirecy');
-    cy.get('[placeholder="Enter your email address"]').type('paul.freire+cy@crifa.com');
-    cy.get('[placeholder="Re-enter your email address"]').type('paul.freire+cy@crifa.com');
-    cy.get('[placeholder="Enter your phone number"]').type('1234567890');
-    cy.get('[placeholder="Enter your username"]').type('paulfreirecy');
-    cy.get('[placeholder="Enter a password"]').type('123456');
-    cy.get('[placeholder="Re-enter password"]').type('123456');
+    cy.get('[placeholder="Enter your name"]').type(mockusers.userOne.firstName);
+    cy.get('[placeholder="Enter your last name"]').type(mockusers.userOne.lastName);
+    cy.get('[placeholder="Enter your email address"]').type(mockusers.userOne.emailAddress);
+    cy.get('[placeholder="Re-enter your email address"]').type(mockusers.userOne.confirmEmail);
+    cy.get('[placeholder="Enter your phone number"]').type(mockusers.userOne.confirmEmail);
+    cy.get('[placeholder="Enter your username"]').type(mockusers.userOne.userName);
+    cy.get('[placeholder="Enter a password"]').type(mockusers.userOne.password);
+    cy.get('[placeholder="Re-enter password"]').type(mockusers.userOne.passwordConf);
     cy.get('[name="terms"]').click();
     cy.get('[class="btn btn-primary card-form-btn primary-btn register-btn"]').click();
     //cy.url().should('include', 'https://microsite-dev6.automateddecision.com/settings#/subscription') // NO SIRVE ESTO
@@ -70,14 +68,14 @@ describe('Job Link Microsite Automation Test', () => {
     cy.visit('https://microsite-dev6.automateddecision.com/login');
 
     cy.get('[class="btn btn-primary-outline card-form-btn secondary-btn"]').click();
-    cy.get('[placeholder="Enter your name"]').type('Paul');
-    cy.get('[placeholder="Enter your last name"]').type('Freire');
-    cy.get('[placeholder="Enter your email address"]').type('paul.freire+cy@crifa.com');
-    cy.get('[placeholder="Re-enter your email address"]').type('paul.freire+cy@crifa.com');
-    cy.get('[placeholder="Enter your phone number"]').type('1234567890');
-    cy.get('[placeholder="Enter your username"]').type('paulfreireEMAILDUP');
-    cy.get('[placeholder="Enter a password"]').type('123456');
-    cy.get('[placeholder="Re-enter password"]').type('123456');
+    cy.get('[placeholder="Enter your name"]').type(mockusers.userOne.firstName);
+    cy.get('[placeholder="Enter your last name"]').type(mockusers.userOne.lastName);
+    cy.get('[placeholder="Enter your email address"]').type(mockusers.userOne.emailAddress);
+    cy.get('[placeholder="Re-enter your email address"]').type(mockusers.userOne.confirmEmail);
+    cy.get('[placeholder="Enter your phone number"]').type(mockusers.userOne.phoneNumber);
+    cy.get('[placeholder="Enter your username"]').type(mockusers.userOne.userName);
+    cy.get('[placeholder="Enter a password"]').type(mockusers.userOne.password);
+    cy.get('[placeholder="Re-enter password"]').type(mockusers.userOne.passwordConf);
     cy.get('[name="terms"]').click();
     cy.get('[class="btn btn-primary card-form-btn primary-btn register-btn"]').click();
 
@@ -91,14 +89,14 @@ describe('Job Link Microsite Automation Test', () => {
     cy.visit('https://microsite-dev6.automateddecision.com/login');
 
     cy.get('[class="btn btn-primary-outline card-form-btn secondary-btn"]').click();
-    cy.get('[placeholder="Enter your name"]').type('Paul');
-    cy.get('[placeholder="Enter your last name"]').type('Freire');
-    cy.get('[placeholder="Enter your email address"]').type('paul.freire+cy@crifa.com');
-    cy.get('[placeholder="Re-enter your email address"]').type('paul.freire+cy@crifa.com');
-    cy.get('[placeholder="Enter your phone number"]').type('1234567890');
-    cy.get('[placeholder="Enter your username"]').type('paulfreirecy');
-    cy.get('[placeholder="Enter a password"]').type('123456');
-    cy.get('[placeholder="Re-enter password"]').type('123456');
+    cy.get('[placeholder="Enter your name"]').type(mockusers.userOne.firstName);
+    cy.get('[placeholder="Enter your last name"]').type(mockusers.userOne.lastName);
+    cy.get('[placeholder="Enter your email address"]').type(mockusers.userOne.emailAddress);
+    cy.get('[placeholder="Re-enter your email address"]').type(mockusers.userOne.confirmEmail);
+    cy.get('[placeholder="Enter your phone number"]').type(mockusers.userOne.phoneNumber);
+    cy.get('[placeholder="Enter your username"]').type(mockusers.userOne.userName);
+    cy.get('[placeholder="Enter a password"]').type(mockusers.userOne.password);
+    cy.get('[placeholder="Re-enter password"]').type(mockusers.userOne.passwordConf);
     cy.get('[name="terms"]').click();
     cy.get('[class="btn btn-primary card-form-btn primary-btn register-btn"]').click();
 
@@ -111,29 +109,47 @@ describe('Job Link Microsite Automation Test', () => {
     cy.visit('https://microsite-dev6.automateddecision.com/login');
 
     cy.get('[class="btn btn-primary-outline card-form-btn secondary-btn"]').click();
-    cy.get('[placeholder="Enter your name"]').type('Paul');
-    cy.get('[placeholder="Enter your last name"]').type('Freire');
-    cy.get('[placeholder="Enter your email address"]').type('paul.freire+cy2@crifa.com');
-    cy.get('[placeholder="Re-enter your email address"]').type('paul.freire+cy3@crifa.com');
-    cy.get('[placeholder="Enter your phone number"]').type('1234567890');
-    cy.get('[placeholder="Enter your username"]').type('paulfreirecy2');
-    cy.get('[placeholder="Enter a password"]').type('123456');
-    cy.get('[placeholder="Re-enter password"]').type('123456');
+    cy.get('[placeholder="Enter your name"]').type(mockusers.userOne.firstName);
+    cy.get('[placeholder="Enter your last name"]').type(mockusers.userOne.lastName);
+    cy.get('[placeholder="Enter your email address"]').type(mockusers.userOne.emailAddress);
+    cy.get('[placeholder="Re-enter your email address"]').type(mockusers.userOne.confirmEmail);
+    cy.get('[placeholder="Enter your phone number"]').type(mockusers.userOne.phoneNumber);
+    cy.get('[placeholder="Enter your username"]').type(mockusers.userOne.userName);
+    cy.get('[placeholder="Enter a password"]').type(mockusers.userOne.password);
+    cy.get('[placeholder="Re-enter password"]').type(mockusers.userOne.passwordConf);
     cy.get('[name="terms"]').click();
     cy.get('[class="btn btn-primary card-form-btn primary-btn register-btn"]').click();
 
-    cy.contains('The email confirmation does not match.')
-      .should('be.visible');
+    cy.contains('The email confirmation does not match.').should('be.visible');
 
   })
 
-  it('(TBD)Password Mismatch Error Message Validation', () => {
-    //TBD
+  it('(NEW) Password Mismatch Error Message Validation', () => {
+    cy.visit('https://microsite-dev6.automateddecision.com/login');
+    cy.get('[class="btn btn-primary-outline card-form-btn secondary-btn"]').click();
+    cy.get('[placeholder="Enter your name"]').type(mockusers.userOne.firstName);
+    cy.get('[placeholder="Enter your last name"]').type(mockusers.userOne.lastName);
+    cy.get('[placeholder="Enter your email address"]').type(mockusers.userOne.emailAddress);
+    cy.get('[placeholder="Re-enter your email address"]').type(mockusers.userOne.confirmEmail);
+    cy.get('[placeholder="Enter your phone number"]').type(mockusers.userOne.phoneNumber);
+    cy.get('[placeholder="Enter your username"]').type(mockusers.userOne.userName);
+    cy.get('[placeholder="Enter a password"]').type(mockusers.userOne.password);
+    cy.get('[placeholder="Re-enter password"]').type(mockusers.userOne.passwordConf);
+    cy.get('[name="terms"]').click();
+    cy.get('[class="btn btn-primary card-form-btn primary-btn register-btn"]').click();
+
+    cy.contains('The password confirmation does not match.').should('be.visible');
+
   })
+
 
   it('(TBD) Contact Information Update', () => {
-    //TBD
+    cy.visit('https://microsite-dev6.automateddecision.com/login');
+    cy.get('[class="btn btn-primary-outline card-form-btn secondary-btn"]').click()
+
   })
+
+
 
   it('(TBD) Member Invitation Validation', () => {
     //TBD
@@ -143,8 +159,17 @@ describe('Job Link Microsite Automation Test', () => {
 
 })
 
-// algun bucle para crear cuentas diferentes cada vez? (NO!) y luego borrar? 
+
 // como eliminar la cuenta? (ojo no se puede desde el microsite)(ASK DEVs FOR HELP for a script to delete the accounts.)
+
+
+// crear un archivio de JSON 
+// tener varios usuarios , por cada usuario va ser un objeto con sus propiedades.
+// llamo aqui al archivo JSON 
+
+// Expresion regular test casess.  (TO DO) EL FORMA\TO DEL EMAIL. 
+// TEST CASES EL TIPO DE DATO. 
+// EXPONENCIAL TIPO DE DA
 
 
 
